@@ -37,7 +37,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../../../css/home.min.css" rel="stylesheet">
+    <link href="../../../css/search.min.css" rel="stylesheet">
   </head>
   <body>
     
@@ -74,15 +74,6 @@
               <img width="150" src="../../assets//logo/logo.png" />
             </div>
             <div class="col-8 menubar">
-              <!-- <nav class="nav d-flex justify-content-between">
-                <a class="menubar-link d-flex align-items-center p-2 text-decoration-none active" href="#">Beranda</a>
-                <a class="menubar-link d-flex align-items-center p-2 text-decoration-none" href="#">Profile</a>
-                <a class="menubar-link d-flex align-items-center p-2 text-decoration-none" href="#">Berita</a>
-                <a class="menubar-link d-flex align-items-center p-2 text-decoration-none" href="#">Informasi Publik</a>
-                <a class="menubar-link d-flex align-items-center p-2 text-decoration-none" href="#">Sistem Informasi</a>
-                <a class="menubar-link d-flex align-items-center p-2 text-decoration-none" href="#">Perangkat Daerah</a>
-                <a class="menubar-link d-flex align-items-center p-2 text-decoration-none" href="#">Lainnya</a>
-              </nav> -->
               <nav class="navbar navbar-expand-lg navbar-light nav">
                 <div class="container-fluid h-100">
                   <div class="collapse navbar-collapse h-100" id="navbarSupportedContent">
@@ -306,88 +297,19 @@
             </button>
           </div>
         </div>
-        <div class="main-container">
-          <!-- Feature Section -->
-          <div class="row featured">
-            <div class="col-12 col-xl-8">
-              <!-- CAROUSEL -->
-              <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators carousel-nav">
-                  <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../../assets/images/banner.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../assets/images/banner.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../assets/images/banner.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../assets/images/banner.png" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button> -->
-              </div>
-            </div>
-            <div class="col-12 col-xl-4 headline-list">
-              <p class="fw-bold">Headline Popular</p>
-              <ul class="headline-collection overflow-auto">
-                <li class="headline-item">PPDB Online 2023</li>
-                <li class="headline-item">Operasi Patuh Jaya Agustus</li>
-                <li class="headline-item">Event Sepanjang 2023</li>
-                <li class="headline-item">Event Sepanjang 2023</li>
-                <li class="headline-item">Event Sepanjang 2023</li>
-              </ul>
-            </div>
+        <div class="main-container">  
+          <!-- Breadcrumb Section -->
+          <div class="breadcrumb d-flex align-items-center">
+            <span class="active">Beranda</span>
+            <img src="../../assets/icons/chevron-left.png" />
+            <span>Pencarian</span>
           </div>
-          <!-- Quick Menu Section -->
-          <div class="quick-menu">
-            <div class="row quick-menu-list">
-              <div class="col d-flex align-items-center gap-3">
-                <image src="../../assets/images/kependudukan.png" width="40" />
-                <span class="fw-bold">Layanan<br/>Kependudukan</span>
-              </div>
-              <div class="col d-flex align-items-center gap-3">
-                <image src="../../assets/images/kesehatan.png" width="40" />
-                <span class="fw-bold">Layanan<br/>Kesehatan</span>
-              </div>
-              <div class="col d-flex align-items-center gap-3">
-                <image src="../../assets/images/pembangunan.png" width="40" />
-                <span class="fw-bold">Informasi<br/>Pembangunan</span>
-              </div>
-              <div class="col d-flex align-items-center gap-3">
-                <image src="../../assets/images/apbp.png" width="40" />
-                <span class="fw-bold">Informasi<br/>APBP</span>
-              </div>
-              <div class="col d-flex align-items-center gap-3">
-                <image src="../../assets/images/casn.png" width="40" />
-                <span class="fw-bold">Informasi<br/>CASN</span>
-              </div>
-              <!-- <div class="col d-flex align-items-center gap-3">
-                <div class="more-menu rounded-circle">
-                  ...
-                </div>
-              </div> -->
-            </div>
-          </div>    
-          <!-- News Secition -->
+          <div class="separator w-100"></div>
+          <!-- News Section -->
           <div class="news">
-            <div class="d-flex justify-content-between align-items-center">
-              <h1 class="headline-news">Berita & Inovasi Pemerintah Kabupaten Tangerang</h1>
-              <button class="headline-button fw-bold">Tampilkan Semua</button>
+            <div class="search-head d-flex justify-content-between align-items-center">
+              <h1 class="headline-news">Pencarian</h1>
+              <input type="search" class="search-box" placeholder="Cari berita..." />
             </div>
             <div class="news-container">
               <div class="row">
@@ -427,126 +349,9 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center gap-3">
-              <div class="achievement-title fw-bold">Prestasi Pemerintah Kabupaten Tangerang</div>
-              <div class="separator w-100"></div>
-            </div>
-          </div>
-          <!-- Achievement Section -->
-          <div class="achievement">
-            <div class="row">
-              <div class="col-4">
-                <div class="achievement-item d-flex justify-content-center align-items-center gap-3">
-                  <img src="../../assets/dummies/achievement-dummy/achievement-1.png" width="60" />
-                  <span>Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI Mahkamah</span>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="achievement-item d-flex justify-content-center align-items-center gap-3">
-                  <img src="../../assets/dummies/achievement-dummy/achievement-1.png" width="60" />
-                  <span>Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI Mahkamah</span>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="achievement-item d-flex justify-content-center align-items-center gap-3">
-                  <img src="../../assets/dummies/achievement-dummy/achievement-1.png" width="60" />
-                  <span>Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI Mahkamah</span>
-                </div>
-              </div>
-            </div>
-            <div class="separator mt-8"></div>
-          </div>
-          <!-- Graphic Info Section -->
-          <div class="graphic-info">
-            <div class="header row">
-              <div class="col-3">
-                <h1>Info Grafis</h1>
-              </div>
-              <div class="col-6">
-                <p>Menampilkan berbagai rekaman video yang mengabadikan kegiatan dan acara yang diadakan oleh Komisi Penyiaran Indonesia. Dari konferensi pers, diskusi panel, hingga seminar</p>
-              </div>
-              <div class="col-3">
-                <button class="text-center d-flex justify-content-center align-items-center gap-3 px-2 tk-button ml-auto">
-                  <img src="../../assets/icons/megaphone.png"/>
-                  <div>
-                    Kunjungi Sosial Media
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div class="row graphic-list">
-              <div class="col-3">
-                <img src="../../assets/dummies/graphic-dummy/graphic-1.png" />
-                <div class="graphic-summary">Iuran BPJS Naik Dua Kali Lipat</div>
-              </div>
-              <div class="col-3">
-                <img src="../../assets/dummies/graphic-dummy/graphic-2.png" />
-                <div class="graphic-summary">Cara Cek Pajak Kendaraan</div>
-              </div>
-              <div class="col-3">
-                <img src="../../assets/dummies/graphic-dummy/graphic-3.png" />
-                <div class="graphic-summary">Pencegahan Covid-19</div>
-              </div>
-              <div class="col-3">
-                <img src="../../assets/dummies/graphic-dummy/graphic-4.png" />
-                <div class="graphic-summary">Menjaga Kesehatan Mental</div>
-              </div>
-            </div>
-          </div>
-          <!-- Video Section -->
-          <div class="video">
-            <div class="row justify-content-md-center">
-              <div class="col-6">
-                <h1>Video Event & Kegiatan Pemerintah Kabupaten Tangerang</h1>
-              </div>
-            </div>
-            <div class="video-list">
-              <div class="d-flex align-items-center justify-content-between">
-                  <img src="../../assets/dummies/video-dummy/video-1.png" height="320" />
-                  <img src="../../assets/dummies/video-dummy/video-2.png" height="320" />
-              </div>
-              <div class="mt-2 d-flex align-items-center justify-content-between">
-                  <img src="../../assets/dummies/video-dummy/video-3.png" height="350" />
-                  <img src="../../assets/dummies/video-dummy/video-4.png" height="350" />
-                  <img src="../../assets/dummies/video-dummy/video-5.png" height="350" />
-              </div>
-            </div>
-            <div class="separator mt-16"></div>
           </div>
           <!-- Gallery Section -->
           <div class="gallery">
-            <div class="row justify-content-md-center">
-              <div class="col-6">
-                <h1>Galeri Kegiatan Pemerintah Kabupaten Tangerang</h1>
-              </div>
-            </div>
-            <div class="gallery-list">
-              <div class="d-flex align-items-center gap-2">
-                  <img src="../../assets/dummies/gallery-dummy/gallery-1.png" height="285" />
-                  <img src="../../assets/dummies/gallery-dummy/gallery-2.png" height="285" />
-                  <img src="../../assets/dummies/gallery-dummy/gallery-3.png" height="285" />
-              </div>
-              <div class="d-flex align-items-center gap-2 mt-2">
-                <img src="../../assets/dummies/gallery-dummy/gallery-4.png" height="285" />
-                <img src="../../assets/dummies/gallery-dummy/gallery-5.png" height="285" />
-                <img src="../../assets/dummies/gallery-dummy/gallery-6.png" height="285" />
-                <img src="../../assets/dummies/gallery-dummy/gallery-7.png" height="285" />
-              </div>
-              <div class="d-flex align-items-center gap-2 mt-2">
-                <img src="../../assets/dummies/gallery-dummy/gallery-8.png" height="285" />
-                <img src="../../assets/dummies/gallery-dummy/gallery-9.png" height="285" />
-                <img src="../../assets/dummies/gallery-dummy/gallery-10.png" height="285" />
-              </div>
-            </div>
-            <div class="catch-phrase">
-              <img src="../../assets/images/bupati.png"  />
-              <div class="catch-phrase-main d-flex justify-content-center align-items-center">
-                <div class="phrase">
-                  <h2>“Kabupaten Tangerang yang Maju, Mandiri, dan Berbudaya”</h2>
-                  <span>Ahmad Zaki Iskandar - Bupati Tangerang</span>
-                </div>
-              </div>
-            </div>
             <footer class="row">
               <div class="col-4 left">
                 <img width="150" src="../../assets//logo/logo.png" />
