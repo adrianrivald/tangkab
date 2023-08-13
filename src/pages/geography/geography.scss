@@ -91,108 +91,26 @@
       .content {
         padding-left: 8rem;
         padding-right: 8rem;
-        .search-head {
-          gap: 5rem;
-          .search-box {
-            padding: 1rem;
-            border-radius: 1rem;
-            width: 100%;
-            border: 1px solid $grey-line;
-            background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
-            background-size: 20px;
-            background-position-x: 1rem;
-            padding-left: 3rem;
-            ::placeholder {
-              margin-left: 1rem;
-            }
-            :focus {
-              border: 1px solid $purple-primary;
-            }
-          }
-          .search-title {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            h1 {
-              font-size: 38px;
-            }
-          }
-        }
-        .search-container {
-          .search-list {
+        .geo-container {
+          .geo-list {
             ul {
               padding: 0;
             }
-            .news-item {
+            .geo-item {
               gap: 1rem;
-              padding-top: 2rem;
               padding-bottom: 2rem;
               list-style: none;
-              margin: 1rem 0;
               border-bottom: 1px solid $grey-border;
-              &.last {
-                padding-bottom: 0;
-                border-bottom: none;
-              }
-              .date {
-                color: $purple-primary;
-                font-size: 16px;
+              .geo-title {
+                font-size: 32px;
                 margin-top: 16px;
               }
-              .news-title {
-                font-size: 20px;
-                margin-top: 16px;
-              }
-              .news-summary {
+              .geo-summary {
                 font-size: 16px;
                 margin-top: 16px
               }
             }
           }
-        }
-        .achievement-title {
-          color: $purple-primary;
-          flex: none;
-        }
-      }
-      .achievement {
-        padding: 2rem 8rem;
-        .achievement-item {
-          padding: 1rem;
-          border-radius: 1rem;
-          background-color: $grey-box;
-        }
-      }
-      .graphic-info {
-        margin-top: 6rem;
-        padding: 2rem 8rem;
-        line-height: 28.8px;
-        h1 {
-          color: -webkit-linear-gradient(#D83DFF , #D93737); 
-        }
-        .graphic-list {
-          margin-top: 2rem;
-          .graphic-summary {
-            margin-top: 1rem;
-          }
-        }
-      }
-      .video {
-        padding: 4rem 8rem ;
-        h1 {
-          text-align: center;
-          color: $purple-primary;
-          font-size: 38px;
-        }
-        .video-list {
-          margin-top: 2rem;
-        }
-      }
-      .footer {
-        h1 {
-          padding: 2rem 8rem ;
-          text-align: center;
-          color: $purple-primary;
-          font-size: 38px;
         }
       }
       footer {
