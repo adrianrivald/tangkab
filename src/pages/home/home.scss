@@ -413,6 +413,7 @@
           
           -webkit-mask: var(--mask); 
           mask: var(--mask);
+          overflow: hidden;
         }
       }
       .catch-phrase {
