@@ -36,8 +36,10 @@
       .navbar-content {
         width: 100%;
         margin: auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         @include media-breakpoint-up(lg) { 
           padding-left: 8rem;
           padding-right: 8rem;
@@ -131,8 +133,8 @@
             padding-right: 0;
            }
           margin-top: 24px;
-          padding-left: 3rem;
-          padding-right: 3rem;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
           .headline-collection {
             height: 250px;
             padding: 0;
@@ -163,8 +165,8 @@
       }
       .quick-menu {
         overflow-x: auto;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
         border-top: 1px solid $grey-border;
@@ -203,8 +205,8 @@
           padding-left: 8rem;
           padding-right: 8rem;
          }
-         padding-left: 3rem;
-         padding-right: 3rem;
+         padding-left: 1.5rem;
+         padding-right: 1.5rem;
         .headline-news {
           padding-top: 4rem;
           width: 70%;
@@ -276,8 +278,8 @@
       }
       .achievement {
         padding-top: 2rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         @include media-breakpoint-up(lg) { 
           padding: 2rem 8rem;
         }
@@ -308,8 +310,8 @@
       .graphic-info {
         margin-top: 2rem;
         padding: 2rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         line-height: 28.8px;
         @include media-breakpoint-up(lg) { 
           margin-top: 6rem;
@@ -334,7 +336,7 @@
         }
       }
       .video {
-        padding: 3rem;
+        padding: 1.5rem;
         @include media-breakpoint-up(lg) { 
           padding: 4rem 8rem ;;
          }
@@ -384,8 +386,8 @@
       .gallery {
         h1 {
           padding-top: 2rem;
-          padding-left: 3rem;
-          padding-right: 3rem;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
           color: $black;
           font-size: 18px;
           @include media-breakpoint-up(lg) { 
