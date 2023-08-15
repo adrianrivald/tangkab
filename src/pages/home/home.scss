@@ -107,17 +107,46 @@
       }
       .mobile-menu {
         width: 100%;
-        margin-top: 6rem;
+        margin-top: 5.7rem;
         border-radius: 0;
         z-index: 999;
         position: fixed;
-        .container {
-          .item {
-            flex: none;
+        .card-mobile {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          .container {
+            gap: 2rem;
+            .item {
+              padding: 0 1rem;
+              flex: none;
+              &.first {
+                padding-left: 0;
+              }
+              &.last {
+                padding-right: 0;
+              }
+            }
           }
-        }
-        .container::-webkit-scrollbar {
-          display: none;
+          .container::-webkit-scrollbar {
+            display: none;
+          }
+          .mobile-sub-menu {
+            max-height: 70vh;
+            padding: 0;
+            overflow-y: auto;
+            .item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                margin: 1rem 0;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid $grey-border;
+            }
+          }
+          .mobile-sub-menu::-webkit-scrollbar {
+            display: none;
+          }
         }
       }
     }
