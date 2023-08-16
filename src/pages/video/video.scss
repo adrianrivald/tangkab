@@ -45,7 +45,7 @@
     /* Navbar */
     .navbar-menu {
       padding: 0;
-      border-bottom: 1px $grey-border solid;
+      border-bottom: solid;
   
       .navbar-content {
         width: 100%;
@@ -57,6 +57,7 @@
         position: fixed;
         z-index: 999;
         background-color: $white;
+        border-bottom: 1px solid $grey-border;
         @include media-breakpoint-up(lg) { 
           padding-left: 8rem;
           padding-right: 8rem;
@@ -176,11 +177,18 @@
   
     .main-container {
       margin-top: 0;
+      @include media-breakpoint-down(lg) { 
+        margin-top: 5.7rem;
+      }
       .breadcrumb {
         padding-left: 8rem;
         padding-right: 8rem;
         margin-top: 1rem;
         gap: 0.5rem;
+        @include media-breakpoint-down(lg) { 
+          padding-left: 1.5rem;
+          margin-top: 7rem;
+        }
         .active {
           color: $purple-primary;
         }
@@ -189,16 +197,20 @@
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         @include media-breakpoint-up(lg) { 
+          margin-top: 0rem;
           padding-left: 8rem;
           padding-right: 8rem;
         }
         .video-container {
           .video-list {
-            border-right: 1px solid $grey-border;
+            @include media-breakpoint-up(lg) { 
+              border-right: 1px solid $grey-border;
+              padding-right: 2rem;
+            }
+              padding-top: 2rem;
               .video-player {
                 width: 100%;
                 height: 365px;
-                margin-top: 2rem;
                 border-radius: 12px;
               }
               .video-title {
@@ -227,9 +239,11 @@
               }
           }
           .video-other {
-            margin-top: 2rem;
+            @include media-breakpoint-up(lg) { 
+              padding-left: 2rem;;
+            }
+            padding-top: 2rem;
             .video-other-list {
-              margin-top: 2rem;
               padding: 0;
               overflow-y: auto;
               height: 110vh;
@@ -264,10 +278,16 @@
         }
       }
       footer {
+        // position: absolute;
+        // background-color: $white;
+        // margin-top: -1rem;
         border: 1px solid $grey-line;
         border-top-left-radius: 32px;
         border-top-right-radius: 32px;
-        padding: 4rem 8rem;
+        padding: 4rem 1.5rem;
+        @include media-breakpoint-up(lg) { 
+          padding: 4rem 8rem;
+        }
         .center {
           .footer-menu-list {
             list-style: none;

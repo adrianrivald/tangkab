@@ -579,7 +579,7 @@
         border: 1px solid $grey-line;
         border-top-left-radius: 32px;
         border-top-right-radius: 32px;
-        padding: 4rem 3rem;
+        padding: 4rem 1.5rem;
         @include media-breakpoint-up(lg) { 
           padding: 4rem 8rem;
         }
