@@ -77,10 +77,30 @@
                   padding-top: 1rem;
                   padding-bottom: 1rem;
                   border-bottom: 1px solid $grey-border;
+                  .item {
+                    width: 80%;
+                  }
+                }
+                &.active {
+                  .item {
+                    color: $purple-primary;
+                  }
                 }
               }
               &.large {
-                left: -30rem;
+                left: -33rem;
+                background: none;
+                border: none;
+              }
+              .sub {
+                font-weight: bold;
+                flex: none;
+                background: white;
+                border-radius: 16px;
+                border: 1px solid $grey-border;
+                &.ml-2 {
+                  margin-left: 0.1rem;
+                }
               }
             }
             .menubar-link {
@@ -370,10 +390,17 @@
           font-size: 18px;
         }
         .achievement-list {
+          @include media-breakpoint-up(lg) { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+          }
           .achievement-item-list {
             width: 80%;
             @include media-breakpoint-down(lg) { 
-              flex: none;
+              width: 100%;
+              margin: 1rem 0;
             }
             .achievement-item {
               background-color: $grey-box;
@@ -382,6 +409,12 @@
               background-color: $grey-box;
             }
           }
+        }
+        .headline-button {
+          padding: 12px 28px;
+          border-radius: 32px;
+          border: 1px solid $grey-border;
+          background-color: $white;
         }
         .achievement-list::-webkit-scrollbar {
           display: none;
