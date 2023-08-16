@@ -295,6 +295,9 @@
             }
           }
         }
+        #restMenu {
+          margin-top: 1rem;
+        }
       }
       .quick-menu::-webkit-scrollbar {
         display: none;
@@ -304,15 +307,13 @@
           padding-left: 8rem;
           padding-right: 8rem;
          }
+         margin-top: 2rem;
          padding-left: 1.5rem;
          padding-right: 1.5rem;
         .headline-news {
-          padding-top: 4rem;
           width: 70%;
           font-size: 18px;
           @include media-breakpoint-up(lg) { 
-            padding-top: 2rem;
-            padding-bottom: 2rem;
             width: auto;
             font-size: 38px;
         }
@@ -343,6 +344,7 @@
                 border-bottom: none;
               }
               .date {
+                color: $grey-date;
                 font-size: 16px;
                 margin-top: 16px;
               }
@@ -571,6 +573,9 @@
         }
       }
       footer {
+        // position: absolute;
+        // background-color: $white;
+        // margin-top: -1rem;
         border: 1px solid $grey-line;
         border-top-left-radius: 32px;
         border-top-right-radius: 32px;

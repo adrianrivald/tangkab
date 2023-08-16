@@ -30,6 +30,12 @@
           $(`#${item}-sub`).removeClass('show')
         })
        }
+       function onExpand(){
+        var restMenu = $('#restMenu');
+        var expandButton = $('#expandButton');
+        restMenu.removeClass("d-none");
+        expandButton.addClass("d-none")
+       }
    </script>
     <style>
       .bd-placeholder-img {
@@ -697,31 +703,54 @@
           </div>
           <!-- Quick Menu Section -->
           <div class="quick-menu d-none d-lg-block">
-            <div class="row quick-menu-list">
-              <div class="col-2 d-flex align-items-center gap-3">
+            <div class="row row-cols-5 quick-menu-list ">
+              <div class="col d-flex align-items-center gap-3">
                 <img src="../../assets/images/kependudukan.png" width="40" />
                 <span>Layanan<br/>Kependudukan</span>
               </div>
-              <div class="col-2 d-flex align-items-center gap-3">
+              <div class="col d-flex align-items-center gap-3">
                 <img src="../../assets/images/kesehatan.png" width="40" />
                 <span>Layanan<br/>Kesehatan</span>
               </div>
-              <div class="col-2 d-flex align-items-center gap-3">
+              <div class="col d-flex align-items-center gap-3">
                 <img src="../../assets/images/pembangunan.png" width="40" />
                 <span>Informasi<br/>Pembangunan</span>
               </div>
-              <div class="col-2 d-flex align-items-center gap-3">
+              <div class="col d-flex align-items-center gap-3">
                 <img src="../../assets/images/apbp.png" width="40" />
                 <span>Informasi<br/>APBP</span>
               </div>
-              <div class="col-2 d-flex align-items-center gap-3">
-                <img src="../../assets/images/casn.png" width="40" />
-                <span>Informasi<br/>CASN</span>
+              <div class="col d-flex align-items-center flex-none gap-3">
+                  <img src="../../assets/images/casn.png" width="40" />
+                  <div class="d-flex flex-none w-100 align-items-center">
+                    <span class="flex-none w-50">Informasi<br/>CASN</span>
+                    <div onclick="onExpand()" id="expandButton" class="more-menu rounded-circle">
+                      <img src="../../assets/icons/more.png" height="20"/>
+                    </div>
+                </div>
               </div>
-              <div class="col-2 d-flex justify-content-around align-items-center gap-3">
-                <div class="more-menu rounded-circle">
+              <!-- <div class="col-2 d-flex justify-content-around align-items-center gap-3">
+                <div onclick="onExpand()" class="more-menu rounded-circle">
                   <img src="../../assets/icons/more.png" height="20"/>
                 </div>
+              </div> -->
+            </div>
+            <div id="restMenu" class="row row-cols-5 quick-menu-list d-none">
+              <div class="col d-flex align-items-center gap-3">
+                <img src="../../assets/images/darurat.png" width="40" />
+                <span>Tanggap<br/>Darurat</span>
+              </div>
+              <div class="col d-flex align-items-center gap-3">
+                <img src="../../assets/images/pengaduan.png" width="40" />
+                <span>Pos<br/>Pengaduan</span>
+              </div>
+              <div class="col d-flex align-items-center gap-3">
+                <img src="../../assets/images/banjir.png" width="40" />
+                <span>Pantau<br/>Banjir</span>
+              </div>
+              <div class="col d-flex align-items-center gap-3">
+                <img src="../../assets/images/cctv.png" width="40" />
+                <span>CCTV<br/>Kab. Tangerang</span>
               </div>
             </div>
           </div>    
