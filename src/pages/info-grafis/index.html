@@ -16,7 +16,23 @@
     <link href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      function onClickMenu(id){
+        var menus = ['profil', 'berita', 'publik', 'sistem', 'perangkat', 'lainnya']
+        var menu = $(`#${id}`);
+        var subMenu= $(`#${id}-sub`);
+        menu.addClass("active");
+        subMenu.addClass("show");
+        var excluded = menus.filter(function(item){
+          return item !== id
+        })
+        excluded.forEach(function(item){
+          $(`#${item}`).removeClass('active')
+          $(`#${item}-sub`).removeClass('show')
+        })
+       }
+    </script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -37,7 +53,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../../../css/visionmission.min.css" rel="stylesheet">
+    <link href="../../../css/info-grafis.min.css" rel="stylesheet">
   </head>
   <body>
     
@@ -549,44 +565,46 @@
           <div class="breadcrumb d-flex align-items-center">
             <span class="active">Beranda</span>
             <img src="../../assets/icons/chevron-left.png" />
-            <span>Visi & Misi</span>
+            <span>Video Kegiatan</span>
           </div>
           <div class="separator w-100"></div>
           <!-- Content Section -->
           <div class="content">
-            <div class="vision-container">
+            <div class="grafis-container">
               <div class="row">
-                <div class="col-12 vision-list">
-                  <ul>
-                    <li class="d-flex justify-content-between vision-item">
-                      <div class="left-area">
-                        <div class="vision-item-list border-bottom">
-                          <div class="vision-title">Visi:</div>
-                          <ul class="vision-summary">
-                            <li class="pt-0">“Mewujudkan masyarakat Kabupaten Tangerang yang Religius, Cerdas, Sehat dan Sejahtera”</li>
-                          </ul>
-                        </div>
-
-                        <div class="mission-item-list">
-                          <div class="mission-list">
-                            <div class="mission-title">Misi:</div>
-                            <ul class="mission-summary">
-                              <li class="pt-0">Meningkatkan penerapan nilai-nilai keagamaan dalam kehidupan bermasyarakat menuju masyarakat yang religius.</li>
-                              <li>Meningkatkan akses mutu dan pemerataan pelayanan pendidikan dan kesehatan untuk mewujudkan masyarakat yang cerdas dan sehat.</li>
-                              <li>Mengembangkan ekonomi daerah yang kompetitif dan berbasis kerakyatan.</li>
-                              <li class="border-0">Meningkatkan kualitas tata kelola pemerintahan yang professional, transparan dan akuntabel.</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="right-area">
-                        <div class="image-area">
-                          <img src="../../assets/images/visi-misi-1.png" width="486" />
-                          <img class="m-0" src="../../assets/images/visi-misi-2.png" width="486" />
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                <div class="col-12 col-lg-7 grafis-list">
+                  <div class="d-flex gap-2">
+                    <img src="../../assets/images/info-grafis-1.png" />
+                    <svg width="6" height="707" viewBox="0 0 6 707" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="6" height="707" rx="3" fill="black" fill-opacity="0.1"/>
+                      <rect width="6" height="405" rx="3" fill="#A72583"/>
+                    </svg>                      
+                  </div>
+                </div>
+                <div class="col-12 col-lg-5 grafis-other">
+                  <h2>Infografis lainnya</h2>
+                  <div class="grafis-other-list">
+                    <div>
+                      <img src="../../assets/dummies/graphic-dummy/graphic-1.png" />
+                      <p>Iuran BPJS Naik Dua Kali Lipat</p>
+                    </div>
+                    <div>
+                      <img src="../../assets/dummies/graphic-dummy/graphic-2.png" />
+                      <p>Iuran BPJS Naik Dua Kali Lipat</p>
+                    </div>
+                    <div>
+                      <img src="../../assets/dummies/graphic-dummy/graphic-3.png" />
+                      <p>Iuran BPJS Naik Dua Kali Lipat</p>
+                    </div>
+                    <div>
+                      <img src="../../assets/dummies/graphic-dummy/graphic-4.png" />
+                      <p>Iuran BPJS Naik Dua Kali Lipat</p>
+                    </div>
+                  </div>
+                  <svg width="361" height="6" viewBox="0 0 361 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="6" width="5.99998" height="361" rx="2.99999" transform="rotate(-90 0 6)" fill="black" fill-opacity="0.1"/>
+                    <rect y="6" width="5.99999" height="140" rx="3" transform="rotate(-90 0 6)" fill="#A72583"/>
+                  </svg>  
                 </div>
               </div>
             </div>

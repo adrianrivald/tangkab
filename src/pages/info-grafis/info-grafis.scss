@@ -190,74 +190,34 @@
         padding-right: 1.5rem;
         @include media-breakpoint-up(lg) { 
           padding-left: 8rem;
-          padding-right: 8rem;
+          // padding-right: 8rem;
         }
-        .video-container {
-          .video-list {
+        .grafis-container {
+          .grafis-list {
             border-right: 1px solid $grey-border;
-              .video-player {
-                width: 100%;
-                height: 365px;
-                margin-top: 2rem;
-                border-radius: 12px;
-              }
-              .video-title {
-                font-size: 32px;
-                margin-top: 16px;
-              }
-              .video-summary {
-                font-size: 16px;
-                margin-top: 16px
-              }
-              .bar {
-                display: flex;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-                background-color: $grey-bar;
-                border-radius: 12px;
-                // padding: 1rem;
-                .video-date {
-                  border-right: 1px solid $grey-border;
-                  padding: 1.5rem 3rem 1.5rem 1.5rem;
-                }
-                .video-views {
-                  flex: auto;
-                  padding: 1.5rem;
-                }
+            padding-top: 2rem;
+              img {
+                width: 98%;
               }
           }
-          .video-other {
+          .grafis-other {
             margin-top: 2rem;
-            .video-other-list {
+            .grafis-other-list {
               margin-top: 2rem;
+              margin-bottom: 1rem;
               padding: 0;
-              overflow-y: auto;
-              height: 110vh;
-              .item {
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
-                border-bottom: 1px solid $grey-border;
-                .left {
-                  width: 50%;
-                  .date {
-                    color: $purple-primary;
-                  }
-                  h3 {
-                    margin-top: 1rem;
-                    font-size: 16px;    
-                    display: -webkit-box;
-                    max-width: 200px;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                  }
-                  @include media-breakpoint-down(lg) { 
-                    width: 100%;
-                    h3 {
-                      max-width: 100%;
-                    }
-                  }
-                }
+              overflow-x: auto;
+              display: flex;
+              gap: 1rem;
+              --mask: linear-gradient(to right, 
+                rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
+                rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+            ) 100% 50% / 100% 100% repeat-x;
+            
+            -webkit-mask: var(--mask); 
+            mask: var(--mask);
+              p {
+                margin-top: 1rem;
               }
             }
           }
