@@ -19,12 +19,15 @@
       function onClickMenu(id){
         var menus = ['profil', 'berita', 'publik', 'sistem', 'perangkat', 'lainnya']
         var menu = $(`#${id}`);
+        var subMenu= $(`#${id}-sub`);
         menu.addClass("active");
+        subMenu.addClass("show");
         var excluded = menus.filter(function(item){
           return item !== id
         })
         excluded.forEach(function(item){
           $(`#${item}`).removeClass('active')
+          $(`#${item}-sub`).removeClass('show')
         })
        }
    </script>
@@ -53,29 +56,32 @@
   <body>
     
     <div class="main">
-      <div class="headline py-3 row text-white align-items-center d-none d-lg-flex">
-        <div class="col-8">
-          <span>Kabupaten Tangerang yang Maju, Mandiri, dan Berbudaya Menuju Masyarakat</span>
-        </div>
-        <div class="col-4 d-flex justify-content-end">
-          <div class="d-flex align-items-center">
-              <div>Media Sosial</div>
-              <div class="social-media d-flex align-items-center gap-4">
-                <a href="" class="social-media-icon">
-                  <img src="../../assets/icons/twitter.png" />
-                </a>
-                <a href="" class="social-media-icon">
-                  <img src="../../assets/icons/linkedin.png" />
-                </a>
-                <a href="" class="social-media-icon">
-                  <img src="../../assets/icons/twitter.png" />
-                </a>
-                <a href="" class="social-media-icon">
-                  <img src="../../assets/icons/linkedin.png" />
-                </a>
-              </div>
+      <div class="headline-container d-none d-lg-block">
+        <div class="headline py-3 row text-white align-items-center">
+          <div class="col-8">
+            <span>Kabupaten Tangerang yang Maju, Mandiri, dan Berbudaya Menuju Masyarakat</span>
+          </div>
+          <div class="col-4 d-flex justify-content-end">
+            <div class="d-flex align-items-center">
+                <div>Media Sosial</div>
+                <div class="social-media d-flex align-items-center gap-4">
+                  <a href="" class="social-media-icon">
+                    <img src="../../assets/icons/twitter.png" />
+                  </a>
+                  <a href="" class="social-media-icon">
+                    <img src="../../assets/icons/linkedin.png" />
+                  </a>
+                  <a href="" class="social-media-icon">
+                    <img src="../../assets/icons/twitter.png" />
+                  </a>
+                  <a href="" class="social-media-icon">
+                    <img src="../../assets/icons/linkedin.png" />
+                  </a>
+                </div>
+            </div>
           </div>
         </div>
+        <div class="rounded-white absolute"></div>
       </div>
 
       <div class="body-container bg-white">  
@@ -276,11 +282,135 @@
                         <a class="nav-link dropdown-toggle menubar-link d-flex align-items-center p-2 text-decoration-none" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Perangkat Daerah
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu large" aria-labelledby="navbarDropdown">
+                          <div class="d-flex gap-3">
+                            <div class="row">
+                              <div class="col-12">
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Sejarah</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Visi & Misi</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Profil Bupati</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Profil Wakil Bupati</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Struktur Organisasi</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4">
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Sejarah</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Visi & Misi</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Profil Bupati</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Profil Wakil Bupati</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Struktur Organisasi</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                              </div>
+                              <div class="col-4">
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Letak Geografis</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Lambang Daerah</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Program Unggulan</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Profil Kecamatan</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Info RTRW</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                              </div>
+                              <div class="col-4">
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Profil OPD</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Logo Tangerang Gemilang</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>Laporan Anggaran</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                                <li class="dropdown-list">
+                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <span>SDM Kepegawaian</span>
+                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  </a>
+                                </li>
+                              </div>
+                            </div>
+                          </div>
                         </ul>
                       </li>
                       <!-- Menu Lainnya -->
@@ -329,53 +459,99 @@
               </div>
             </div>
             <div class="card card-body rounded-0 card-mobile">
-              <ul class="mobile-sub-menu">
-                <li class="item">
+              <!-- Profile submenu -->
+              <ul id="profil-sub" class="mobile-sub-menu show">
+                <li class="item fw-bold">
                   <span>Sejarah</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Visi & Misi</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Profil Bupati</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Profile Wakil Bupati</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Struktur Organisasi</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Letak Geografis</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Lambang Daerah</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Program Unggulan</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Profil Kecamatan</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Info RTRW</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Profile OPD</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
-                <li class="item">
+                <li class="item fw-bold">
                   <span>Logo Tangerang Gumilang</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+              </ul>
+              <!-- Berita Submenu -->
+              <ul id="berita-sub" class="mobile-sub-menu">
+                <li class="item fw-bold">
+                  <span>Berita Daerah</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+                <li class="item fw-bold">
+                  <span>Berita OPD</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+                <li class="item fw-bold">
+                  <span>Berita Inovasi Daerah</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+              </ul>
+              <!-- Informasi publik Submenu -->
+              <ul id="publik-sub" class="mobile-sub-menu">
+                <li class="item fw-bold">
+                  <span>PPID</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+                <li class="item fw-bold">
+                  <span>SP4N Lapor</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+                <li class="item fw-bold">
+                  <span>TPAKD</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+                <li class="item fw-bold">
+                  <span>Inovasi Daerah</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+              </ul>
+              <!-- Sistem informasi Submenu -->
+              <ul id="publik-sub" class="mobile-sub-menu">
+                <li class="item fw-bold">
+                  <span>Aplikasi Kab. Tangerang</span>
+                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                </li>
+                <li class="item fw-bold">
+                  <span>Dashboard Kab. Tangerang</span>
                   <img src="../../assets/icons/arrow-more.png" height="15" />
                 </li>
               </ul>

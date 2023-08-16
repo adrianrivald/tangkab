@@ -3,20 +3,31 @@
 
 /* Main */
 .main {
-  background-color: #400D31;
   height: auto;
   overflow: hidden;
   max-width: 1440px;
   margin: 0 auto;
-  .headline {
-    color: $grey-dark;
-    padding-left: 8rem;
-    padding-right: 8rem;
-    .social-media {
-      margin-left: 5rem;
-      .social-media-icon {
-        cursor: pointer;
-      } 
+  .headline-container {
+    background-color: #400D31;
+    height: 4.5rem;
+    .headline {
+      color: $grey-dark;
+      padding-left: 8rem;
+      padding-right: 8rem;
+      .social-media {
+        margin-left: 5rem;
+        .social-media-icon {
+          cursor: pointer;
+        } 
+      }
+    }
+    .rounded-white{
+      border-top-right-radius: 24px;
+      border-top-left-radius: 24px;
+      height: 1rem;
+      width: 100%;
+      background-color: $white;
+      bottom: 0;
     }
   }
   /* Container */
@@ -67,6 +78,9 @@
                   padding-bottom: 1rem;
                   border-bottom: 1px solid $grey-border;
                 }
+              }
+              &.large {
+                left: -30rem;
               }
             }
             .menubar-link {
@@ -136,7 +150,11 @@
             display: none;
           }
           .mobile-sub-menu {
-            max-height: 77vh;
+            display: none;
+            &.show {
+              display: block;
+            }
+            height: 77vh;
             padding: 0;
             overflow-y: auto;
             .item {
