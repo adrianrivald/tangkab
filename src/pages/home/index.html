@@ -36,6 +36,18 @@
         restMenu.removeClass("d-none");
         expandButton.addClass("d-none")
        }
+       function onclickAccordionMenu(id){
+        var menus = ['dinas', 'badan', 'kecamatan', 'kelurahan', 'rsud']
+        var menu = $(`#${id}`);
+        menu.addClass("active");
+        var excluded = menus.filter(function(item){
+          return item !== id
+        })
+        excluded.forEach(function(item){
+          $(`#${item}`).removeClass('active')
+        })
+       }
+       
    </script>
     <style>
       .bd-placeholder-img {
@@ -575,15 +587,55 @@
                 </li>
               </ul>
               <!-- Sistem informasi Submenu -->
-              <ul id="publik-sub" class="mobile-sub-menu">
-                <li class="item fw-bold">
-                  <span>Aplikasi Kab. Tangerang</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
-                </li>
-                <li class="item fw-bold">
-                  <span>Dashboard Kab. Tangerang</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
-                </li>
+              <ul id="sistem-sub" class="mobile-sub-menu" id="accordionSistem">
+                <div id="headingDinas">
+                  <li id="dinas"  class="item fw-bold active"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDinas" aria-expanded="true" aria-controls="collapseDinas">
+                    <span>Dinas</span>
+                    <img src="../../assets/icons/right-arrow.png" height="15" />
+                  </li>
+                  <div id="collapseDinas" class="accordion-collapse collapse show" aria-labelledby="headingDinas" data-bs-parent="#accordionSistem">
+                    <div class="accordion-body">
+                      <li class="item fw-bold">
+                        <span>Dinas Tenaga Kerja</span>
+                        <img src="../../assets/icons/arrow-more.png" height="15" />
+                      </li>
+                      <li class="item fw-bold">
+                        <span>Dinas Komunikasi dan Informasi</span>
+                        <img src="../../assets/icons/arrow-more.png" height="15" />
+                      </li>
+                      <li class="item fw-bold">
+                        <span>Dinas Pendidikan</span>
+                        <img src="../../assets/icons/arrow-more.png" height="15" />
+                      </li>
+                      <li class="item fw-bold">
+                        <span>Dinas Kesehatan</span>
+                        <img src="../../assets/icons/arrow-more.png" height="15" />
+                      </li>
+                      <li class="item fw-bold">
+                        <span>Dinas Sosial</span>
+                        <img src="../../assets/icons/arrow-more.png" height="15" />
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div  id="headingBadan">
+                  <li id="badan" class="item fw-bold collapsed"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBadan" aria-expanded="true" aria-controls="collapseBadan">
+                    <span>Badan</span>
+                    <img src="../../assets/icons/right-arrow.png" height="15" />
+                  </li>
+                  <div id="collapseBadan" class="accordion-collapse collapse" aria-labelledby="headingBadan" data-bs-parent="#accordionSistem">
+                    <div class="accordion-body">
+                      <li class="item fw-bold">
+                        <span>Badan ...</span>
+                        <img src="../../assets/icons/arrow-more.png" height="15" />
+                      </li>
+                      <li class="item fw-bold">
+                        <span>Badan ...</span>
+                        <img src="../../assets/icons/arrow-more.png" height="15" />
+                      </li>
+                    </div>
+                  </div>
+                </div>
               </ul>
             </div>
           </div>  
