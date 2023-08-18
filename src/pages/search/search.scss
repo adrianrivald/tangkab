@@ -45,7 +45,7 @@
     /* Navbar */
     .navbar-menu {
       padding: 0;
-      border-bottom: 1px $grey-border solid;
+      border-bottom: 1px solid $grey-border;
   
       .navbar-content {
         width: 100%;
@@ -57,13 +57,15 @@
         position: fixed;
         z-index: 999;
         background-color: $white;
+        border-bottom: 1px solid $grey-border;
         @include media-breakpoint-up(lg) { 
           padding-left: 8rem;
           padding-right: 8rem;
           padding-top: 0rem;
           padding-bottom: 0rem;
           position: relative;
-         }
+          border-bottom: 0;
+        }
         .menubar {
           height: 100px;
           .nav {
@@ -78,6 +80,9 @@
                   padding-bottom: 1rem;
                   border-bottom: 1px solid $grey-border;
                 }
+              }
+              &.large {
+                left: -30rem;
               }
             }
             .menubar-link {
@@ -170,7 +175,7 @@
         }
       }
     }
-  
+
     .main-container {
       margin-top: 0;
       .breadcrumb {
@@ -178,6 +183,10 @@
         padding-right: 8rem;
         margin-top: 1rem;
         gap: 0.5rem;
+        @include media-breakpoint-down(lg) { 
+          padding-left: 1.5rem;
+          margin-top: 7rem;
+        }
         .active {
           color: $purple-primary;
         }
@@ -216,16 +225,16 @@
           }
         }
         .search-container {
-          .search-list {
+          .side-news {
             ul {
               padding: 0;
             }
-            .news-item {
+            .search-item {
               gap: 1rem;
               padding-top: 2rem;
               padding-bottom: 2rem;
               list-style: none;
-              margin-bottom: 1rem;
+              margin: 1rem 0;
               border-bottom: 1px solid $grey-border;
               &.last {
                 padding-bottom: 0;
@@ -236,20 +245,30 @@
                 font-size: 16px;
                 margin-top: 16px;
               }
-              .news-title {
+              .search-title {
                 font-size: 20px;
                 margin-top: 16px;
               }
-              .news-summary {
+              .search-summary {
                 font-size: 16px;
-                margin-top: 16px
+                margin-top: 16px;
+                @include media-breakpoint-down(lg) { 
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+              }
+              img {
+                border-radius: 16px;
+                @include media-breakpoint-down(lg) { 
+                  object-fit: cover;
+                  height: 200px;
+                  width: 150px;
+                  border-radius: 16px;
+                }
               }
             }
           }
-        }
-        .achievement-title {
-          color: $purple-primary;
-          flex: none;
         }
       }
       .achievement {
@@ -294,10 +313,13 @@
         }
       }
       footer {
+        // position: absolute;
+        // background-color: $white;
+        // margin-top: -1rem;
         border: 1px solid $grey-line;
         border-top-left-radius: 32px;
         border-top-right-radius: 32px;
-        padding: 4rem 3rem;
+        padding: 4rem 1.5rem;
         @include media-breakpoint-up(lg) { 
           padding: 4rem 8rem;
         }
