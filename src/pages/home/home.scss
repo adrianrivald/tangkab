@@ -57,13 +57,15 @@
         position: fixed;
         z-index: 999;
         background-color: $white;
+        border-bottom: 1px solid $grey-border;
         @include media-breakpoint-up(lg) { 
           padding-left: 8rem;
           padding-right: 8rem;
           padding-top: 0rem;
           padding-bottom: 0rem;
           position: relative;
-         }
+          border-bottom: 0;
+        }
         .menubar {
           height: 100px;
           .nav {
@@ -113,7 +115,7 @@
                 border-bottom: 2px #A72583 solid;
                 --mask: linear-gradient(to bottom, 
                 rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
-                rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+                rgba(0,0,0, 0) 95%, rgb(0, 0, 0) 0
                 ) 100% 50% / 100% 100% repeat-x;
                 
                 -webkit-mask: var(--mask); 

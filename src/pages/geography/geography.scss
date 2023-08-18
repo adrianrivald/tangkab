@@ -56,14 +56,15 @@
         padding-bottom: 0.5rem;
         position: fixed;
         z-index: 999;
-        background-color: $white;
+        border-bottom: 1px solid $grey-border;
         @include media-breakpoint-up(lg) { 
           padding-left: 8rem;
           padding-right: 8rem;
           padding-top: 0rem;
           padding-bottom: 0rem;
           position: relative;
-         }
+          border-bottom: 0;
+        }
         .menubar {
           height: 100px;
           .nav {

@@ -16,7 +16,23 @@
     <link href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      function onClickMenu(id){
+        var menus = ['profil', 'berita', 'publik', 'sistem', 'perangkat', 'lainnya']
+        var menu = $(`#${id}`);
+        var subMenu= $(`#${id}-sub`);
+        menu.addClass("active");
+        subMenu.addClass("show");
+        var excluded = menus.filter(function(item){
+          return item !== id
+        })
+        excluded.forEach(function(item){
+          $(`#${item}`).removeClass('active')
+          $(`#${item}-sub`).removeClass('show')
+        })
+       }
+    </script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -37,7 +53,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../../../css/search.min.css" rel="stylesheet">
+    <link href="../../../../css/news-detail.min.css" rel="stylesheet">
   </head>
   <body>
     
@@ -52,16 +68,16 @@
                 <div>Media Sosial</div>
                 <div class="social-media d-flex align-items-center gap-4">
                   <a href="" class="social-media-icon">
-                    <img src="../../assets/icons/twitter.png" />
+                    <img src="../../../assets/icons/twitter.png" />
                   </a>
                   <a href="" class="social-media-icon">
-                    <img src="../../assets/icons/linkedin.png" />
+                    <img src="../../../assets/icons/linkedin.png" />
                   </a>
                   <a href="" class="social-media-icon">
-                    <img src="../../assets/icons/twitter.png" />
+                    <img src="../../../assets/icons/twitter.png" />
                   </a>
                   <a href="" class="social-media-icon">
-                    <img src="../../assets/icons/linkedin.png" />
+                    <img src="../../../assets/icons/linkedin.png" />
                   </a>
                 </div>
             </div>
@@ -74,7 +90,7 @@
         <div class="navbar-menu">
           <div class="navbar-content row align-items-center justify-content-between">
             <div class="col-2">
-              <img width="150" src="../../assets//logo/logo.png" />
+              <img width="150" src="../../../assets//logo/logo.png" />
             </div>
             <div class="col-8 menubar d-none d-xl-block">
               <nav class="navbar navbar-expand-lg navbar-light nav">
@@ -96,31 +112,31 @@
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Sejarah</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Visi & Misi</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Profil Bupati</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Profil Wakil Bupati</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Struktur Organisasi</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                             </div>
@@ -128,31 +144,31 @@
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Letak Geografis</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Lambang Daerah</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Program Unggulan</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Profil Kecamatan</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Info RTRW</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                             </div>
@@ -160,25 +176,25 @@
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Profil OPD</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Logo Tangerang Gemilang</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>Laporan Anggaran</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                               <li class="dropdown-list">
                                 <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                                   <span>SDM Kepegawaian</span>
-                                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                                 </a>
                               </li>
                             </div>
@@ -194,19 +210,19 @@
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>Berita Daerah</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>Berita OPD</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>Berita Inovasi Daerah</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                         </ul>
@@ -220,25 +236,25 @@
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>PPID</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>SP4N Lapor</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>TPAKD</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>Inovasi Daerah</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                         </ul>
@@ -252,13 +268,13 @@
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>Aplikasi Kab. Tangerang</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                           <li class="dropdown-list">
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
                               <span>Dashboard Kab. Tangerang</span>
-                              <img src="../../assets/icons/arrow-more.png" height="15" />
+                              <img src="../../../assets/icons/arrow-more.png" height="15" />
                             </a>
                           </li>
                         </ul>
@@ -270,152 +286,128 @@
                         </a>
                         <ul class="dropdown-menu large" aria-labelledby="navbarDropdown">
                           <div class="d-flex gap-3">
-                            <div class="row sub">
+                            <div class="row">
                               <div class="col-12">
-                                <li class="dropdown-list active">
+                                <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas</span>
-                                    <img src="../../assets/icons/right-arrow.png" height="15" />
+                                    <span>Sejarah</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Badan</span>
-                                    <img src="../../assets/icons/right-arrow.png" height="15" />
+                                    <span>Visi & Misi</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Kecamatan</span>
-                                    <img src="../../assets/icons/right-arrow.png" height="15" />
+                                    <span>Profil Bupati</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Kelurahan</span>
-                                    <img src="../../assets/icons/right-arrow.png" height="15" />
+                                    <span>Profil Wakil Bupati</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">RSUD</span>
-                                    <img src="../../assets/icons/right-arrow.png" height="15" />
-                                  </a>
-                                </li>
-                                <li class="dropdown-list">
-                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Puskesmas</span>
-                                    <img src="../../assets/icons/right-arrow.png" height="15" />
+                                    <span>Struktur Organisasi</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                               </div>
                             </div>
-                            <div class="row sub ml-2">
+                            <div class="row">
                               <div class="col-4">
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Tenaga Kerja</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Sejarah</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Komunikasi dan Informasi</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Visi & Misi</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Pendidikan</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Profil Bupati</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Kesehatan</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Profil Wakil Bupati</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Sosial</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Struktur Organisasi</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                               </div>
                               <div class="col-4">
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Pemuda Olahraga</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Letak Geografis</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Kependudukan</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Lambang Daerah</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Bina Marga dan Sumber Daya</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Program Unggulan</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Tata Ruang</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Profil Kecamatan</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Perikanan</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
-                                  </a>
-                                </li>
-                                <li class="dropdown-list">
-                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Perhubungan</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Info RTRW</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                               </div>
                               <div class="col-4">
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Koperasi dan Usaha</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Profil OPD</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Perindustrian dan Perikanan</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Logo Tangerang Gemilang</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Lingkungan Hidup</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>Laporan Anggaran</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                                 <li class="dropdown-list">
                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Penanaman Modal</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
-                                  </a>
-                                </li>
-                                <li class="dropdown-list">
-                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Pemberdayaan Perempuan</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
-                                  </a>
-                                </li>
-                                <li class="dropdown-list">
-                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                    <span class="text-truncate item">Dinas Perpustakan</span>
-                                    <img src="../../assets/icons/arrow-more.png" height="15" />
+                                    <span>SDM Kepegawaian</span>
+                                    <img src="../../../assets/icons/arrow-more.png" height="15" />
                                   </a>
                                 </li>
                               </div>
@@ -442,7 +434,7 @@
             </div>
             <div class="col-4 col-lg-2 d-flex justify-content-end search-col gap-3">
               <div class="search-button rounded-circle">
-                <img src="../../assets/icons/magnifier.png" height="20"/>
+                <img src="../../../assets/icons/magnifier.png" height="20"/>
               </div>
               <div 
                 id="burgerMenu" 
@@ -453,7 +445,7 @@
                 aria-expanded="false" 
                 aria-controls="collapseExample"
               >
-                <img src="../../assets/icons/burger.png" height="20"/>
+                <img src="../../../assets/icons/burger.png" height="20"/>
               </div>
             </div>
           </div>
@@ -473,192 +465,156 @@
               <ul id="profil-sub" class="mobile-sub-menu show">
                 <li class="item fw-bold">
                   <span>Sejarah</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Visi & Misi</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Profil Bupati</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Profile Wakil Bupati</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Struktur Organisasi</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Letak Geografis</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Lambang Daerah</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Program Unggulan</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Profil Kecamatan</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Info RTRW</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Profile OPD</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Logo Tangerang Gumilang</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
               </ul>
               <!-- Berita Submenu -->
               <ul id="berita-sub" class="mobile-sub-menu">
                 <li class="item fw-bold">
                   <span>Berita Daerah</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Berita OPD</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Berita Inovasi Daerah</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
               </ul>
               <!-- Informasi publik Submenu -->
               <ul id="publik-sub" class="mobile-sub-menu">
                 <li class="item fw-bold">
                   <span>PPID</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>SP4N Lapor</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>TPAKD</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
                 <li class="item fw-bold">
                   <span>Inovasi Daerah</span>
-                  <img src="../../assets/icons/arrow-more.png" height="15" />
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
                 </li>
               </ul>
               <!-- Sistem informasi Submenu -->
-              <ul id="sistem-sub" class="mobile-sub-menu" id="accordionSistem">
-                <div id="headingDinas">
-                  <li id="dinas"  class="item fw-bold active"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDinas" aria-expanded="true" aria-controls="collapseDinas">
-                    <span>Dinas</span>
-                    <img src="../../assets/icons/right-arrow.png" height="15" />
-                  </li>
-                  <div id="collapseDinas" class="accordion-collapse collapse show" aria-labelledby="headingDinas" data-bs-parent="#accordionSistem">
-                    <div class="accordion-body">
-                      <li class="item fw-bold">
-                        <span>Dinas Tenaga Kerja</span>
-                        <img src="../../assets/icons/arrow-more.png" height="15" />
-                      </li>
-                      <li class="item fw-bold">
-                        <span>Dinas Komunikasi dan Informasi</span>
-                        <img src="../../assets/icons/arrow-more.png" height="15" />
-                      </li>
-                      <li class="item fw-bold">
-                        <span>Dinas Pendidikan</span>
-                        <img src="../../assets/icons/arrow-more.png" height="15" />
-                      </li>
-                      <li class="item fw-bold">
-                        <span>Dinas Kesehatan</span>
-                        <img src="../../assets/icons/arrow-more.png" height="15" />
-                      </li>
-                      <li class="item fw-bold">
-                        <span>Dinas Sosial</span>
-                        <img src="../../assets/icons/arrow-more.png" height="15" />
-                      </li>
-                    </div>
-                  </div>
-                </div>
-                <div  id="headingBadan">
-                  <li id="badan" class="item fw-bold collapsed"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBadan" aria-expanded="true" aria-controls="collapseBadan">
-                    <span>Badan</span>
-                    <img src="../../assets/icons/right-arrow.png" height="15" />
-                  </li>
-                  <div id="collapseBadan" class="accordion-collapse collapse" aria-labelledby="headingBadan" data-bs-parent="#accordionSistem">
-                    <div class="accordion-body">
-                      <li class="item fw-bold">
-                        <span>Badan ...</span>
-                        <img src="../../assets/icons/arrow-more.png" height="15" />
-                      </li>
-                      <li class="item fw-bold">
-                        <span>Badan ...</span>
-                        <img src="../../assets/icons/arrow-more.png" height="15" />
-                      </li>
-                    </div>
-                  </div>
-                </div>
+              <ul id="publik-sub" class="mobile-sub-menu">
+                <li class="item fw-bold">
+                  <span>Aplikasi Kab. Tangerang</span>
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
+                </li>
+                <li class="item fw-bold">
+                  <span>Dashboard Kab. Tangerang</span>
+                  <img src="../../../assets/icons/arrow-more.png" height="15" />
+                </li>
               </ul>
             </div>
           </div>  
         </div>
         <div class="main-container">  
           <!-- Breadcrumb Section -->
-          <div class="breadcrumb d-flex align-items-center">
-            <span class="active">Beranda</span>
-            <img src="../../assets/icons/chevron-left.png" />
-            <span>Pencarian</span>
-          </div>
-          <div class="separator w-100 d-none d-lg-block"></div>
+          <div class="separator w-100"></div>
           <!-- Content Section -->
           <div class="content">
-            <div class="search-head d-none d-lg-flex justify-content-between align-items-center">
-              <h1 class="search-title">Pencarian</h1>
-              <input type="search" class="search-box" placeholder="Cari berita..." />
-            </div>
-            <div class="search-head d-block d-lg-none">
-              <input type="search" class="search-box" placeholder="Cari berita..." />
-            </div>
-     
-            <div class="search-container">
+            <div class="news-detail-container">
               <div class="row">
-                <div class="col-12 side-news">
-                  <ul>
-                    <li class="d-flex justify-content-between align-items-start align-items-lg-center search-item">
-                      <div class="w-50 w-lg-100">
-                        <div class="date">07 Juli 2023</div>
-                        <h2 class="search-title">Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI</h2>
-                        <p class="search-summary">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.he new software will live on Mini's new 9.4-inch round OLED display, the first of its kind in the automotive industry.</p>
-                      </div>
-                      <div>
-                        <img src="../../assets/dummies/news-dummy/news-2.png" />
-                      </div>
+                <div class="col-12 col-lg-8 news-detail-list">
+                  <div class="news-date">
+                    <span>07 Juli</span>
+                    <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="3" cy="3" r="3" fill="#858585"/>
+                    </svg>
+                    <span>231 pembaca</span>
+                  </div>
+                  <h1>Kepala Diskominfo Jadi Narasumber 2nd Annual Workshop Kemenpan RB</h1>
+                  <img src="../../../assets/dummies/news-dummy/news-1.png" />
+                  <p class="news-detail-summary">
+                    JAKARTA - Kepala Dinas Komunikasi dan Informatika (Diskominfo) Kabupaten Tangerang, Nono Sudarno menjadi salah satu narasumber pada 2nd Annual Workshop Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Kemenpan RB) di Sheraton Grand Hotel, Jakarta, Rabu (12/7/2023).</p>
+                  <p>Acara tersebut merupakan Rapat Koordinasi Nasional (Rakornas) Optimalisasi dari Implementasi dan Capaian Target Peta Jalan Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional - Layanan Aspirasi dan Pengaduan Online Rakyat (SP4N-LAPOR!) 2020-2024. Kegiatan yang diselenggarakan Kemenpan RB tersebut berlangsung selama tiga hari, 11-13 Juli 2023.</p>
+                  <p>
+                    Hadir berbagai Kementerian dan Lembaga serta enam Pilot Project SP4N-LAPOR!, yaitu: Kabupaten Tangerang; Kabupaten Badung, Bali; Kabupaten Sleman, Daerah Istimewa Yogyakarta; Provinsi Sumatera Barat; Provinsi Bali; Provinsi Daerah Istimewa Yogyakarta. Acara itu juga diikuti secara daring oleh Ombudsman Perwakilan Provinsi, Dinas Komunikasi dan Informatika serta Inspektur dari seluruh Provinsi dan Kabupaten/Kota di Indonesia
+                  </p>
+                  <p>
+
+                    Dalam sambutannya di hari pertama, Menteri PAN-RB Abdullah Azwar Anas mendorong pengelolaan SP4N-LAPOR! agar lebih aktif dan berdampak. Kanal aduan tersebut dapat menjadi ruang bagi masyarakat dalam mengawasi pemerintah khususnya penyelenggaraan pelayanan publik.
+                  </p>
+                </div>
+                <div class="col-12 col-lg-4 news-detail-other">
+                  <h2>Berita lainnya</h2>
+                  <ul class="news-detail-other-list">
+                    <li class="item">
+                        <span class="date">07 Juli 2023</span>
+                        <h3>Optimalisasi Pengawasan Siaran Pemilu, KPI didorong</h3>
+                        <p class="text-truncate">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.</p>
                     </li>
-                    <li class="d-flex justify-content-between align-items-start align-items-lg-center search-item">
-                      <div class="w-50 w-lg-100">
-                        <div class="date">07 Juli 2023</div>
-                        <h2 class="search-title">Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI</h2>
-                        <p class="search-summary">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.he new software will live on Mini's new 9.4-inch round OLED display, the first of its kind in the automotive industry.</p>
-                      </div>
-                      <div>
-                        <img src="../../assets/dummies/news-dummy/news-3.png" />
-                      </div>
+                    <li class="item">
+                        <span class="date">07 Juli 2023</span>
+                        <h3>Optimalisasi Pengawasan Siaran Pemilu, KPI didorong</h3>
+                        <p class="text-truncate">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.</p>
                     </li>
-                    <li class="d-flex justify-content-between align-items-start align-items-lg-center search-item last">
-                      <div class="w-50 w-lg-100">
-                        <div class="date">07 Juli 2023</div>
-                        <h2 class="search-title">Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI</h2>
-                        <p class="search-summary">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.he new software will live on Mini's new 9.4-inch round OLED display, the first of its kind in the automotive industry.</p>
-                      </div>
-                      <div>
-                        <img src="../../assets/dummies/news-dummy/news-4.png" />
-                      </div>
+                    <li class="item">
+                        <span class="date">07 Juli 2023</span>
+                        <h3>Optimalisasi Pengawasan Siaran Pemilu, KPI didorong</h3>
+                        <p class="text-truncate">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.</p>
+                    </li>
+                    <li class="item">
+                        <span class="date">07 Juli 2023</span>
+                        <h3>Optimalisasi Pengawasan Siaran Pemilu, KPI didorong</h3>
+                        <p class="text-truncate">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.</p>
+                    </li>
+                    <li class="item">
+                        <span class="date">07 Juli 2023</span>
+                        <h3>Optimalisasi Pengawasan Siaran Pemilu, KPI didorong</h3>
+                        <p class="text-truncate">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.</p>
                     </li>
                   </ul>
                 </div>
@@ -669,17 +625,17 @@
           <div class="footer">
             <footer class="row">
               <div class="col-12 col-lg-4 left">
-                <img width="150" src="../../assets//logo/logo.png" />
+                <img width="150" src="../../../assets//logo/logo.png" />
               </div>
               <div class="col-12 col-lg-4 center">
                 <div>Jl. H. Somawinata No.1, Kadu Agung, Kec. Tigaraksa, Kabupaten Tangerang, Banten 15119</div>
                 <div class="d-block d-lg-none mt-3">
                   <div class="d-flex align-items-center contact gap-3">
-                    <img src="../../assets/icons/phone.png" />
+                    <img src="../../../assets/icons/phone.png" />
                     <span>(021) 5995503</span>
                   </div>
                   <div class="d-flex align-items-center contact gap-3">
-                    <img src="../../assets/icons/at.png" />
+                    <img src="../../../assets/icons/at.png" />
                     <span>pemkabtangerang@gmail.co.id</span>
                   </div>
                 </div>
@@ -705,11 +661,11 @@
               </div>
               <div class="col-12 col-lg-4 right d-none d-lg-block">
                 <div class="d-lg-flex align-items-center contact">
-                  <img src="../../assets/icons/phone.png" />
+                  <img src="../../../assets/icons/phone.png" />
                   <span>(021) 5995503</span>
                 </div>
                 <div class="d-flex align-items-center contact">
-                  <img src="../../assets/icons/at.png" />
+                  <img src="../../../assets/icons/at.png" />
                   <span>pemkabtangerang@gmail.co.id</span>
                 </div>
                 <div class="d-flex align-items-center vision">
@@ -722,11 +678,11 @@
               <div class="separator mt-8"></div>
               <div class="d-block d-lg-flex justify-content-between align-items-center copyrights">
                 <div class="d-flex justify-content-lg-between align-items-center socmed">
-                  <img src="../../assets/icons/facebook-footer.png" width="30" />
-                  <img src="../../assets/icons/instagram-footer.png" width="30" />
-                  <img src="../../assets/icons/twitter-footer.png" width="30" />
-                  <img src="../../assets/icons/youtube-footer.png" width="30" />
-                  <img src="../../assets/icons/linkedin-footer.png" width="30" />
+                  <img src="../../../assets/icons/facebook-footer.png" width="30" />
+                  <img src="../../../assets/icons/instagram-footer.png" width="30" />
+                  <img src="../../../assets/icons/twitter-footer.png" width="30" />
+                  <img src="../../../assets/icons/youtube-footer.png" width="30" />
+                  <img src="../../../assets/icons/linkedin-footer.png" width="30" />
                 </div>
                 <div class="text-align-right mt-3 mt-lg-0">
                   <span>Hak Cipta © 2023 Pemerintah Kabupaten Tangerang, Semua Hak Dilindungi.</span>
