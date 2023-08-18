@@ -295,6 +295,101 @@
             }
           }
         }
+        .news-body {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          @include media-breakpoint-up(lg) { 
+            margin-top: 0rem;
+            padding-left: 8rem;
+            padding-right: 8rem;
+          }
+          .col-headline {
+            border-right: 0;
+            @include media-breakpoint-up(lg) { 
+              border-right: 1px solid $grey-border;
+            }
+            .headline-list {
+              width: 100%;
+              border-right: 0;
+              @include media-breakpoint-up(lg) { 
+                padding-right: 2rem;    
+              }         
+              margin-top: 24px;
+              padding-right: 1.5rem;
+              .headline-collection {
+                max-height: 290px;
+                padding: 0;
+                margin: 0;
+                @include media-breakpoint-down(xl) { 
+                  max-height: 167px;
+                }
+                .headline-item {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  list-style: none;
+                  margin: 1rem 0;
+                  padding-bottom: 2rem;
+                  border-bottom: 1px solid $grey-border;
+                }
+              }
+              .headline-collection::-webkit-scrollbar {
+                display: none;
+              }
+              p {
+                font-size: 20px;
+                font-weight: bold;
+              }
+            }
+          }
+          .col-news {
+            .side-news {
+              padding: 0;
+              @include media-breakpoint-up(lg) { 
+                padding-left: 2rem;    
+              }                      
+              .news-item {
+                gap: 1rem;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                list-style: none;
+                margin: 1rem 0;
+                border-bottom: 1px solid $grey-border;
+                &.last {
+                  padding-bottom: 0;
+                  border-bottom: none;
+                }
+                .date {
+                  color: $grey-date;
+                  font-size: 16px;
+                  margin-top: 16px;
+                }
+                .news-title {
+                  font-size: 20px;
+                  margin-top: 16px;
+                }
+                .news-summary {
+                  font-size: 16px;
+                  margin-top: 16px;
+                  @include media-breakpoint-down(lg) { 
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+                }
+                img {
+                  border-radius: 16px;
+                  @include media-breakpoint-down(lg) { 
+                    object-fit: cover;
+                    height: 200px;
+                    width: 150px;
+                    border-radius: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
       footer {
         // position: absolute;
