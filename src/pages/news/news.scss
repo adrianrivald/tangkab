@@ -1,5 +1,5 @@
-@import "../../../../node_modules/bootstrap/scss/bootstrap";
-@import "../../../../scss/main.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../scss/main.scss";
 
 /* Main */
 .main {
@@ -229,49 +229,48 @@
         }
       }
       .content {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        @include media-breakpoint-up(lg) { 
-          margin-top: 0rem;
-          padding-left: 8rem;
-          padding-right: 8rem;
-        }
-        .news-detail-container {
-          .news-detail-list {
+        .news-container {
+          background-image: linear-gradient(to bottom right, $green-news, $white);
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          @include media-breakpoint-up(lg) { 
+            margin-top: 0rem;
+            padding-left: 8rem;
+            padding-right: 8rem;
+          }
+          .head {
+            font-size: 38px;
+            padding: 3rem 0;
+          }
+          .news-list {
             @include media-breakpoint-up(lg) { 
               border-right: 1px solid $grey-border;
               padding-right: 2rem;
             }
-            padding-top: 2rem;
             .news-date {
-              color: $neutral;
-              display: flex;
-              gap: 1rem;
-              align-items: center;
+              margin-top: 1rem;
               margin-bottom: 1rem;
             }
             img {
-              margin-top: 1rem;
               width: -webkit-fill-available;
             }
             h1 {
               font-size: 32px;
             }
-            .news-detail-title {
+            .news-title {
               font-size: 32px;
               margin-top: 16px;
             }
-            .news-detail-summary {
+            .news-summary {
               font-size: 16px;
               margin-top: 16px
             }
           }
-          .news-detail-other {
+          .news-other {
             @include media-breakpoint-up(lg) { 
               padding-left: 2rem;;
             }
-            padding-top: 2rem;
-            .news-detail-other-list {
+            .news-other-list {
               padding: 0;
               overflow-y: auto;
               height: 150vh;
@@ -280,7 +279,7 @@
                 padding-bottom: 1.5rem;
                 border-bottom: 1px solid $grey-border;
                 .date {
-                  color: $purple-primary;
+                  color: $grey-disable;
                 }
                 h3 {
                   margin-top: 1rem;
