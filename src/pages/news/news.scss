@@ -237,6 +237,7 @@
             margin-top: 0rem;
             padding-left: 8rem;
             padding-right: 8rem;
+            padding-bottom: 4rem;
           }
           .head {
             font-size: 38px;
@@ -272,8 +273,7 @@
             }
             .news-other-list {
               padding: 0;
-              overflow-y: auto;
-              height: 150vh;
+              list-style: none;
               .item {
                 padding-top: 1.5rem;
                 padding-bottom: 1.5rem;
