@@ -49,6 +49,20 @@
           $(`#${item}`).removeClass('active')
         })
        }   
+       function onClickAccordion(id){
+        var sections = ['latar', 'organisasi', 'riwayat', 'harta']
+        var section = $(`#${id}`);
+        section.addClass("expanded");
+        var excluded = sections.filter(function(item){
+          return item !== id
+        })
+        excluded.forEach(function(item){
+          $(`#${item}`).removeClass('expanded')
+        })
+        // if (section.hasClass("expanded")) {
+        //   section.removeClass('expanded')
+        // }
+       }   
     </script>
     <style>
       .bd-placeholder-img {
@@ -70,7 +84,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../../../css/news.min.css" rel="stylesheet">
+    <link href="../../../css/profile.min.css" rel="stylesheet">
   </head>
   <body>
     
@@ -590,7 +604,7 @@
               <!-- Sistem informasi Submenu -->
               <ul id="sistem-sub" class="mobile-sub-menu" id="accordionSistem">
                 <div id="headingDinas">
-                  <li id="dinas"  class="item fw-bold active"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDinas" aria-expanded="true" aria-controls="collapseDinas">
+                  <li id="dinas"  class="item fw-bold active"  class="accordion-button" type="bu bio-buttontton" data-bs-toggle="collapse" data-bs-target="#collapseDinas" aria-expanded="true" aria-controls="collapseDinas">
                     <span>Dinas</span>
                     <img src="../../assets/icons/right-arrow.png" height="15" />
                   </li>
@@ -620,7 +634,7 @@
                   </div>
                 </div>
                 <div  id="headingBadan">
-                  <li id="badan" class="item fw-bold collapsed"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBadan" aria-expanded="true" aria-controls="collapseBadan">
+                  <li id="badan" class="item fw-bold collapsed"  class="accordion-button" type="bu bio-buttontton" data-bs-toggle="collapse" data-bs-target="#collapseBadan" aria-expanded="true" aria-controls="collapseBadan">
                     <span>Badan</span>
                     <img src="../../assets/icons/right-arrow.png" height="15" />
                   </li>
@@ -646,101 +660,156 @@
           <div class="separator w-100"></div>
           <!-- Content Section -->
           <div class="content">
-            <div class="news-container">
-              <div class="head">Terupdate Hari Ini</div>
+            <div class="profile-container">
+              <div class="head">Ahmed Zaki Iskandar, B.Bus, SE, M.Si</div>
               <div class="row">
-                <div class="col-12 col-lg-8 news-list">
-                  <img src="../../assets/images/news-updated.png" />
-                  <div class="news-date">
-                    <span>07 Juli 2023</span>
+                <div class="col-12 col-lg-4 profile-pic">
+                  <img src="../../assets/images/profil-bupati.png" />
+                </div>
+                <div class="col-12 col-lg-8 profile-bio">
+                  <div class="table-responsive">
+                    <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>
+                          <p class="font-14">Tempat Tanggal Lahir</p>
+                          <p class="font-16">Tangerang, 14 Desember 1973</p>
+                        </th>
+                        <th>
+                          <p class="font-14">Alamat</p>
+                          <p class="font-16">Tangerang Selatan</p>
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="font-14">Kebangsaan</p>
+                          <p class="font-16">Indonesia</p>
+                        </td>
+                        <td>
+                          <p class="font-14">Jenis Kelamin</p>
+                          <p class="font-16">Laki-laki</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="font-14">Status Perkawinan</p>
+                          <p class="font-16">Kawin</p>
+                        </td>
+                        <td>
+                          <p class="font-14">Nama Istri</p>
+                          <p class="font-16">Tri Hesti Yulianti</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="font-14">Agama</p>
+                          <p class="font-16">Islam</p>
+                        </td>
+                        <td>
+                          <p class="font-14">Motto</p>
+                          <p class="font-16">Percaya pada Tahapan dan Proses untuk Mencapai Tujuan</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                    </table>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                      <div onclick="onClickAccordion('latar')" class="accordion-item bio-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                          <button id="latar" class="accordion-button collapsed bio-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Latar Belakang
+                          </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body bio-body">
+                            <div class="bio-content">
+                              <div class="item border-right">
+                                <p class="font-14">S2 Magister</p>
+                                <p class="font-16">Ilmu Pemerintahan IPDN 2017</p>
+                              </div>
+                              <div class="item">
+                                <p class="font-14">S1 Magister - 2012</p>
+                                <p class="font-16">Ekonomi Universitas Pramita Indonesia Tangerang</p>
+                              </div>
+                            </div>
+                            <div class="bio-content border-top">
+                              <div class="item border-right">
+                                <p class="font-14">Diploma (Bachelor) - 1998</p>
+                                <p class="font-16">Victoria University Australia</p>
+                              </div>
+                              <div class="item">
+                                <p class="font-14">S1 Magister - 2012</p>
+                                <p class="font-16">Ekonomi Universitas Pramita Indonesia Tangerang</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div onclick="onClickAccordion('organisasi')" class="accordion-item bio-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                          <button id="organisasi" class="accordion-button collapsed bio-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Organisasi
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body bio-body">
+                            <div class="bio-content">
+                              <div class="item border-right">
+                                <p class="font-14">Agama</p>
+                                <p class="font-16">Islam</p>
+                              </div>
+                              <div class="item">
+                                <p class="font-14">Agama</p>
+                                <p class="font-16">Islam</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div onclick="onClickAccordion('riwayat')" class="accordion-item bio-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button id="riwayat" class="accordion-button collapsed bio-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Riwayat Pekerjaan
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body bio-body">
+                            <div class="bio-content">
+                              <div class="item border-right">
+                                <p class="font-14">Agama</p>
+                                <p class="font-16">Islam</p>
+                              </div>
+                              <div class="item">
+                                <p class="font-14">Agama</p>
+                                <p class="font-16">Islam</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div onclick="onClickAccordion('harta')" class="accordion-item bio-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                          <button id="harta" class="accordion-button collapsed bio-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Laporan Harta Kekayaan Penyelenggara Negara
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body bio-body">
+                            <div class="bio-content">
+                              <div class="item border-right">
+                                <p class="font-14">Agama</p>
+                                <p class="font-16">Islam</p>
+                              </div>
+                              <div class="item">
+                                <p class="font-14">Agama</p>
+                                <p class="font-16">Islam</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h1>Bupati Zaki Hadiri Pameran Otomotif Terbesar Se-Asia di Kabupaten Tangerang</h1>
-                  <p class="news-summary">
-                    new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.
-                  </p>
                 </div>
-                <div class="col-12 col-lg-4 news-other">
-                  <ul class="news-other-list">
-                    <li class="item">
-                        <span class="date">07 Juli 2023</span>
-                        <h3>Optimalisasi Pengawasan Siaran Pemilu, KPI didorong</h3>
-                        <p class="text-truncate">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.</p>
-                    </li>
-                    <li class="item">
-                        <span class="date">07 Juli 2023</span>
-                        <h3>Optimalisasi Pengawasan Siaran Pemilu, KPI didorong</h3>
-                        <p class="text-truncate">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.</p>
-                    </li>
-                    <li class="item">
-                        <span class="date">07 Juli 2023</span>
-                        <h3>Optimalisasi Pengawasan Siaran Pemilu, KPI didorong</h3>
-                        <p class="text-truncate">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="news-body row">
-              <div class="col-12 col-lg-4 col-headline">
-                <div class="headline-list">
-                  <p>Headline Popular</p>
-                  <ul class="headline-collection overflow-auto">
-                    <li class="headline-item">
-                      <span>PPDB Online 2023</span>
-                      <img src="../../assets/icons/arrow-more.png" height="15" />
-                    </li>
-                    <li class="headline-item">
-                      <span>Operasi Patuh Jaya Agustus</span>
-                      <img src="../../assets/icons/arrow-more.png" height="15" />
-                    </li>
-                    <li class="headline-item">
-                      <span>Event Sepanjang 2023</span>
-                      <img src="../../assets/icons/arrow-more.png" height="15" />
-                    </li>
-                    <li class="headline-item">
-                      <span>Event Sepanjang 2023</span>
-                      <img src="../../assets/icons/arrow-more.png" height="15" />
-                    </li>
-                    <li class="headline-item">
-                      <span>Event Sepanjang 2023</span>
-                      <img src="../../assets/icons/arrow-more.png" height="15" />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-lg-8 col-news">
-                <ul class="side-news">
-                  <li class="d-flex justify-content-between align-items-start align-items-lg-center news-item">
-                    <div class="w-50 w-lg-100">
-                      <div class="date">07 Juli 2023</div>
-                      <h2 class="news-title">Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI</h2>
-                      <p class="news-summary">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.he new software will live on Mini's new 9.4-inch round OLED display, the first of its kind in the automotive industry.</p>
-                    </div>
-                    <div>
-                      <img src="../../assets/dummies/news-dummy/news-2.png" />
-                    </div>
-                  </li>
-                  <li class="d-flex justify-content-between align-items-start align-items-lg-center news-item">
-                    <div class="w-50 w-lg-100">
-                      <div class="date">07 Juli 2023</div>
-                      <h2 class="news-title">Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI</h2>
-                      <p class="news-summary">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.he new software will live on Mini's new 9.4-inch round OLED display, the first of its kind in the automotive industry.</p>
-                    </div>
-                    <div>
-                      <img src="../../assets/dummies/news-dummy/news-3.png" />
-                    </div>
-                  </li>
-                  <li class="d-flex justify-content-between align-items-start align-items-lg-center news-item last">
-                    <div class="w-50 w-lg-100">
-                      <div class="date">07 Juli 2023</div>
-                      <h2 class="news-title">Mini Previews Next-Gen Round Display, Animated Digital Assistant and AI</h2>
-                      <p class="news-summary">new opportunities and transforming businesses. Whether you're looking to streamline your processes, enhance.he new software will live on Mini's new 9.4-inch round OLED display, the first of its kind in the automotive industry.</p>
-                    </div>
-                    <div>
-                      <img src="../../assets/dummies/news-dummy/news-4.png" />
-                    </div>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
