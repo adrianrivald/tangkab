@@ -252,27 +252,39 @@
           p {
             font-size: 16px;
             color: $neutral;
+            @include media-breakpoint-down(lg) { 
+              margin-bottom: 0.5rem;
+            }
           }
           h1 {
             margin-top: 1rem;
             font-size: 32px;
             color: $purple-primary;
+            padding-bottom: 1rem;
+            @include media-breakpoint-down(lg) {
+              width: 80%; 
+              font-size: 18px;
+              margin-top: 0;
+            }
           }
         }
       }
       .headline-title {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
         padding-top: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid $grey-border;
+        padding-bottom: 0;
+        border-bottom: 0;
         @include media-breakpoint-up(lg) { 
+          padding-bottom: 2rem;
           padding-left: 8rem;
           padding-right: 8rem;
-        }
+          border-bottom: 1px solid $grey-border;
+      }
         h1 {
           font-size: 38px;
           margin: 0;
+        @include media-breakpoint-down(lg) { 
+          font-size: 18px;
+        }
         }
       }
       .news-body {
@@ -291,11 +303,11 @@
           .headline-list {
             width: 100%;
             border-right: 0;
+            padding-right: 0;
             @include media-breakpoint-up(lg) { 
               padding-right: 2rem;    
             }         
             margin-top: 24px;
-            padding-right: 1.5rem;
             .headline-collection {
               max-height: 290px;
               padding: 0;
@@ -374,6 +386,47 @@
             border: 1px solid $grey-border;
             background-color: $white;
           }
+        }
+      }
+      .achievement {
+        padding-top: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        @include media-breakpoint-up(lg) { 
+          padding: 2rem 8rem;
+        }
+        .achievement-title {
+          color: $purple-primary;
+          flex: none;
+          margin-bottom: 2rem;
+          font-size: 18px;
+          width: 80%;
+        }
+        .achievement-list {
+          overflow: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+          .achievement-item-list {
+            width: 90%;
+            flex: none;
+            .achievement-item {
+              background-color: $grey-box;
+              padding: 1rem;
+              border-radius: 1rem;
+              background-color: $grey-box;
+            }
+          }
+        }
+        .headline-button {
+          padding: 12px 28px;
+          border-radius: 32px;
+          border: 1px solid $grey-border;
+          background-color: $white;
+        }
+        .achievement-list::-webkit-scrollbar {
+          display: none;
         }
       }
       .gallery {
