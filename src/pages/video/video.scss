@@ -115,7 +115,7 @@
                 border-bottom: 2px #A72583 solid;
                 --mask: linear-gradient(to bottom, 
                 rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
-                rgba(0,0,0, 0) 95%, rgba(0,0,0) 0
+                rgba(0,0,0, 0) 95%, rgb(0, 0, 0) 0
                 ) 100% 50% / 100% 100% repeat-x;
                 
                 -webkit-mask: var(--mask); 
@@ -242,36 +242,36 @@
               border-right: 1px solid $grey-border;
               padding-right: 2rem;
             }
-              padding-top: 2rem;
-              .video-player {
-                width: 100%;
-                height: 365px;
-                border-radius: 12px;
+            padding-top: 2rem;
+            .video-player {
+              width: 100%;
+              height: 365px;
+              border-radius: 12px;
+            }
+            .video-title {
+              font-size: 32px;
+              margin-top: 16px;
+            }
+            .video-summary {
+              font-size: 16px;
+              margin-top: 16px
+            }
+            .bar {
+              display: flex;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              background-color: $grey-bar;
+              border-radius: 12px;
+              // padding: 1rem;
+              .video-date {
+                border-right: 1px solid $grey-border;
+                padding: 1.5rem 3rem 1.5rem 1.5rem;
               }
-              .video-title {
-                font-size: 32px;
-                margin-top: 16px;
+              .video-views {
+                flex: auto;
+                padding: 1.5rem;
               }
-              .video-summary {
-                font-size: 16px;
-                margin-top: 16px
-              }
-              .bar {
-                display: flex;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-                background-color: $grey-bar;
-                border-radius: 12px;
-                // padding: 1rem;
-                .video-date {
-                  border-right: 1px solid $grey-border;
-                  padding: 1.5rem 3rem 1.5rem 1.5rem;
-                }
-                .video-views {
-                  flex: auto;
-                  padding: 1.5rem;
-                }
-              }
+            }
           }
           .video-other {
             @include media-breakpoint-up(lg) { 

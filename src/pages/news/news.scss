@@ -346,6 +346,7 @@
             }
           }
           .col-news {
+            padding-bottom: 2rem;
             .side-news {
               padding: 0;
               @include media-breakpoint-up(lg) { 
@@ -390,6 +391,12 @@
                   }
                 }
               }
+            }
+            .headline-button {
+              padding: 12px 28px;
+              border-radius: 32px;
+              border: 1px solid $grey-border;
+              background-color: $white;
             }
           }
         }

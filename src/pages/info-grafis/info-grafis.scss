@@ -70,6 +70,7 @@
           height: 100px;
           .nav {
             height: 100%;
+            padding: 0;
             .dropdown-menu {
               padding: 0 1rem;
               min-width: max-content !important;
@@ -79,10 +80,30 @@
                   padding-top: 1rem;
                   padding-bottom: 1rem;
                   border-bottom: 1px solid $grey-border;
+                  .item {
+                    width: 80%;
+                  }
+                }
+                &.active {
+                  .item {
+                    color: $purple-primary;
+                  }
                 }
               }
               &.large {
-                left: -30rem;
+                left: -33rem;
+                background: none;
+                border: none;
+              }
+              .sub {
+                font-weight: bold;
+                flex: none;
+                background: white;
+                border-radius: 16px;
+                border: 1px solid $grey-border;
+                &.ml-2 {
+                  margin-left: 0.1rem;
+                }
               }
             }
             .menubar-link {
@@ -92,6 +113,13 @@
               &.active {
                 color: $purple-primary;
                 border-bottom: 2px #A72583 solid;
+                --mask: linear-gradient(to bottom, 
+                rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
+                rgba(0,0,0, 0) 95%, rgb(0, 0, 0) 0
+                ) 100% 50% / 100% 100% repeat-x;
+                
+                -webkit-mask: var(--mask); 
+                mask: var(--mask);
               }
               &.dropdown-toggle::after {
                 display: none;
@@ -160,13 +188,19 @@
             padding: 0;
             overflow-y: auto;
             .item {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                list-style: none;
-                margin: 1rem 0;
-                padding-bottom: 2rem;
-                border-bottom: 1px solid $grey-border;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              list-style: none;
+              margin: 1rem 0;
+              padding-bottom: 1rem;
+              border-bottom: 1px solid $grey-border;
+              &.active {
+                color: $purple-primary;
+              }
+            }
+            .accordion-body {
+              margin-left: 2rem;
             }
           }
           .mobile-sub-menu::-webkit-scrollbar {
@@ -183,6 +217,10 @@
         padding-right: 8rem;
         margin-top: 1rem;
         gap: 0.5rem;
+        @include media-breakpoint-down(lg) { 
+          padding-left: 1.5rem;
+          margin-top: 7rem;
+        }
         .active {
           color: $purple-primary;
         }
@@ -196,14 +234,20 @@
         }
         .grafis-container {
           .grafis-list {
-            border-right: 1px solid $grey-border;
+            @include media-breakpoint-up(lg) { 
+              border-right: 1px solid $grey-border;
+              padding-right: 2rem;
+            }
             padding-top: 2rem;
-              img {
-                width: 98%;
-              }
+            img {
+              width: 98%;
+            }
           }
           .grafis-other {
-            margin-top: 2rem;
+            @include media-breakpoint-up(lg) { 
+              padding-left: 2rem;;
+            }
+            padding-top: 2rem;
             .grafis-other-list {
               margin-top: 2rem;
               margin-bottom: 1rem;
@@ -225,11 +269,18 @@
           }
         }
       }
+      
       footer {
+        // position: absolute;
+        // background-color: $white;
+        // margin-top: -1rem;
         border: 1px solid $grey-line;
         border-top-left-radius: 32px;
         border-top-right-radius: 32px;
-        padding: 4rem 8rem;
+        padding: 4rem 1.5rem;
+        @include media-breakpoint-up(lg) { 
+          padding: 4rem 8rem;
+        }
         .center {
           .footer-menu-list {
             list-style: none;

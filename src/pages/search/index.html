@@ -16,7 +16,41 @@
     <link href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      function onClickMenu(id){
+        var menus = ['profil', 'berita', 'publik', 'sistem', 'perangkat', 'lainnya']
+        var menu = $(`#${id}`);
+        var subMenu= $(`#${id}-sub`);
+        menu.addClass("active");
+        subMenu.addClass("show");
+        var excluded = menus.filter(function(item){
+          return item !== id
+        })
+        excluded.forEach(function(item){
+          $(`#${item}`).removeClass('active')
+          $(`#${item}-sub`).removeClass('show')
+        })
+       }
+       function onExpand(){
+        var restMenu = $('#restMenu');
+        var expandButton = $('#expandButton');
+        restMenu.removeClass("d-none");
+        expandButton.addClass("d-none")
+       }
+       function onclickAccordionMenu(id){
+        var menus = ['dinas', 'badan', 'kecamatan', 'kelurahan', 'rsud']
+        var menu = $(`#${id}`);
+        menu.addClass("active");
+        var excluded = menus.filter(function(item){
+          return item !== id
+        })
+        excluded.forEach(function(item){
+          $(`#${item}`).removeClass('active')
+        })
+       }
+       
+    </script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -555,13 +589,13 @@
                 </li>
               </ul>
               <!-- Sistem informasi Submenu -->
-              <ul id="sistem-sub" class="mobile-sub-menu" id="accordionSistem">
-                <div id="headingDinas">
+              <ul id="sistem-sub" class="mobile-sub-menu">
+                <div onclick="onclickAccordionMenu('dinas')" id="headingDinas">
                   <li id="dinas"  class="item fw-bold active"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDinas" aria-expanded="true" aria-controls="collapseDinas">
                     <span>Dinas</span>
                     <img src="../../assets/icons/right-arrow.png" height="15" />
                   </li>
-                  <div id="collapseDinas" class="accordion-collapse collapse show" aria-labelledby="headingDinas" data-bs-parent="#accordionSistem">
+                  <div id="collapseDinas" class="accordion-collapse collapse show" aria-labelledby="headingDinas" data-bs-parent="#sistem-sub">
                     <div class="accordion-body">
                       <li class="item fw-bold">
                         <span>Dinas Tenaga Kerja</span>
@@ -586,12 +620,12 @@
                     </div>
                   </div>
                 </div>
-                <div  id="headingBadan">
+                <div onclick="onclickAccordionMenu('badan')" id="headingBadan">
                   <li id="badan" class="item fw-bold collapsed"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBadan" aria-expanded="true" aria-controls="collapseBadan">
                     <span>Badan</span>
                     <img src="../../assets/icons/right-arrow.png" height="15" />
                   </li>
-                  <div id="collapseBadan" class="accordion-collapse collapse" aria-labelledby="headingBadan" data-bs-parent="#accordionSistem">
+                  <div id="collapseBadan" class="accordion-collapse collapse" aria-labelledby="headingBadan" data-bs-parent="#sistem-sub">
                     <div class="accordion-body">
                       <li class="item fw-bold">
                         <span>Badan ...</span>

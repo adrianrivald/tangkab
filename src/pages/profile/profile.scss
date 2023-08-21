@@ -210,7 +210,6 @@
       }
     }
   
-  
     .main-container {
       margin-top: 0;
       @include media-breakpoint-down(lg) { 
@@ -258,6 +257,7 @@
             @include media-breakpoint-up(lg) { 
               padding-left: 2rem;;
             }
+            padding-bottom: 2rem;
             table {
               border-collapse: separate;
               border-spacing: 0;
@@ -309,6 +309,17 @@
             /* bottom-right border-radius */
             table tr:last-child td:last-child {
               border-bottom-right-radius: 24px;
+            }
+            .harta-button {
+              gap: 1rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              border: 1px solid $grey-border;
+              border-radius: 24px;
+              padding: 1rem;
+              background: $white;
+              width: 100%;
             }
             .bio-item {
               margin: 1rem 0;
@@ -425,6 +436,7 @@
   border-radius: 5rem;
   padding: 0.5rem;
   color: #A72583;
+  width: 235px;
 }
 
 .ml-auto {

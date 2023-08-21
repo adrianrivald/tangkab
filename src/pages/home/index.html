@@ -48,7 +48,7 @@
         })
        }
        
-   </script>
+    </script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -587,13 +587,13 @@
                 </li>
               </ul>
               <!-- Sistem informasi Submenu -->
-              <ul id="sistem-sub" class="mobile-sub-menu" id="accordionSistem">
-                <div id="headingDinas">
+              <ul id="sistem-sub" class="mobile-sub-menu">
+                <div onclick="onclickAccordionMenu('dinas')" id="headingDinas">
                   <li id="dinas"  class="item fw-bold active"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDinas" aria-expanded="true" aria-controls="collapseDinas">
                     <span>Dinas</span>
                     <img src="../../assets/icons/right-arrow.png" height="15" />
                   </li>
-                  <div id="collapseDinas" class="accordion-collapse collapse show" aria-labelledby="headingDinas" data-bs-parent="#accordionSistem">
+                  <div id="collapseDinas" class="accordion-collapse collapse show" aria-labelledby="headingDinas" data-bs-parent="#sistem-sub">
                     <div class="accordion-body">
                       <li class="item fw-bold">
                         <span>Dinas Tenaga Kerja</span>
@@ -618,12 +618,12 @@
                     </div>
                   </div>
                 </div>
-                <div  id="headingBadan">
+                <div onclick="onclickAccordionMenu('badan')" id="headingBadan">
                   <li id="badan" class="item fw-bold collapsed"  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBadan" aria-expanded="true" aria-controls="collapseBadan">
                     <span>Badan</span>
                     <img src="../../assets/icons/right-arrow.png" height="15" />
                   </li>
-                  <div id="collapseBadan" class="accordion-collapse collapse" aria-labelledby="headingBadan" data-bs-parent="#accordionSistem">
+                  <div id="collapseBadan" class="accordion-collapse collapse" aria-labelledby="headingBadan" data-bs-parent="#sistem-sub">
                     <div class="accordion-body">
                       <li class="item fw-bold">
                         <span>Badan ...</span>
